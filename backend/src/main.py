@@ -1,5 +1,7 @@
-from entities.entity import Session, engine, Base
-from .entities.exam import Exam
+# coding=utf-8
+
+from backend.src.entities.entity import Session, engine, Base
+from backend.src.entities.exam import Exam
 
 # generate database schema
 Base.metadata.create_all(engine)

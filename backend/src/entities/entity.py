@@ -8,8 +8,8 @@ import json
 
 dict_db_params = None
 
-# read the cofig JSON and load it as JSON
-with open('./db_config.json', encoding='utf-8') as F:
+# read the config JSON and load it as JSON
+with open('./entities/db_config.json', encoding='utf-8') as F:
     dict_db_params = json.load(F)
 
 db_url = dict_db_params["host"]
@@ -28,10 +28,9 @@ class Entity():
     id = Column(Integer, primary_key=True)
     created_at = Column(DateTime)
     updated_at = Column(DateTime)
-    last_updated_at = Column(String)
+    last_updated_by = Column(String)
 
     def __init__(self, created_by):
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
-        self.last_updated_at = created_by
-
+        self.last_updated_by = created_by
