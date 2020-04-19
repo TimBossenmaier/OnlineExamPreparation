@@ -1,5 +1,5 @@
 # exclude file for db config
-db_config.json
+backend/src/entities/db_config.json
 
 
 # Byte-compiled / optimized / DLL files
